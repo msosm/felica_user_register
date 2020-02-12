@@ -191,8 +191,8 @@
 
         document.getElementById('inputIdm').value = idmStr;
 
-        var name = document.getElementById('inputName').value;
-        var email = document.getElementById('inputEmail').value;
+        var name = document.getElementById('inputName').value.replace(/\s+/g, "");
+        var email = document.getElementById('inputEmail').value.replace(/\s+/g, "");
 
         if (name != "" && email != ""){
           var response = fetch('/register', {
